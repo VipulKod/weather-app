@@ -49,6 +49,8 @@ async function getWeather() {
         min.innerHTML = `min: ${Math.floor(weatherData.main.temp_min)}°C`;
         wind.innerHTML = `wind: ${weatherData.wind.speed}`;
         humidity.innerHTML = `humidity: ${weatherData.main.humidity}`;
+
+        errorMessage.innerHTML = "";
       } else if (weatherData.cod >= 400) {
         errorMessage.innerHTML = weatherData.message;
       }

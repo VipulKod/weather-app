@@ -9,7 +9,7 @@ body {
 }
 
 .app-container {
-  height: 110vh;
+  height: 130vh;
   width: 100%;
   background-image: url(./Assets/background-img.jpg);
   background-size: cover;

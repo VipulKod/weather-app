@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Raleway:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="container-fluid d-flex justify-content-center p-4">
+        <input
+          class="input p-2 pl-4"
+          id="cityName"
+          placeholder="Search..."
+          type="text"
+        />
+        <button class="button p-2" onclick="getWeather()">
+          <img src="./Assets/search-icon.svg" />
+        </button>
+      </div>
+
+      <div class="error">
+        <h5 class="text-danger text-center" id="errorMessage"></h5>
+      </div>
+
+      <div class="container weather-container" id="displayContainer">
+        <h1 id="city" class="text-center text-white pt-1 m-0"></h1>
+        <h5 id="date" class="text-center text-white"></h5>
+
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="card text-center d-flex flex-row">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 d-flex align-items-center">
+                    <h1
+                      id="temperature"
+                      class="text-white text-center display-1 p-4"
+                    ></h1>
+                  </div>
+                  <div class="col-sm-6">
+                    <img
+                      class="image mx-auto"
+                      style="width: 50%; height: 50%;"
+                      id="weatherIcon"
+                    />
+                    <h2 id="weatherType" class="text-white text-center p-2"></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-2">
+            <div class="card">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <h3 class="text-white p-4" id="max"></h3>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <h3 class="text-white p-4" id="wind"></h3>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col-xs-6 align-items-right">
+                    <h3 class="text-white p-4" id="min"></h3>
+                  </div>
+                  <div class="col-xs-6 align-items-right">
+                    <h3 class="text-white p-4" id="humidity"></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
